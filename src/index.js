@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import UploadPDF from '../src/pages/upload-pdf/uploadpdf';
+import Home from '../src/pages/home/home';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UploadPDF />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/uploadpdf" element={<UploadPDF />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
