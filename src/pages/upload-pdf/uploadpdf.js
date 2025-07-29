@@ -1,9 +1,9 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
 
-import './App.css';
+import './uploadpdf.css';
 
-function App() {
+function UploadPDF() {
 
   const [data, setData] = useState([]);
 
@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="UploadPDF">
 
       <input 
         type="file" 
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default UploadPDF;
